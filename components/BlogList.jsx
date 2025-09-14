@@ -18,10 +18,10 @@ const BlogList = () => {
           </h1>
         </div>
         <div className="flex gap-4 justify-center mt-7">
-          <button onClick={()=>setMenu('All')} className={menu==='All'?"text-green-500":"cursor-pointer"}>All</button>
-          <button onClick={()=>setMenu('Technology')} className={menu==='Technology'?"text-green-500":"cursor-pointer"}>Technology</button>
-          <button onClick={()=>setMenu('Startup')} className={menu==='Startup'?"text-green-500":"cursor-pointer"}>Startup</button>
-          <button onClick={()=>setMenu('Lifestyle')} className={menu==='Lifestyle'?"text-green-500":"cursor-pointer"}>Lifestyle</button>
+          <button onClick={()=>setMenu('All')} className={menu==='All'?"text-green-500 font-semibold":"cursor-pointer font-semibold"}>All</button>
+          <button onClick={()=>setMenu('Technology')} className={menu==='Technology'?"text-green-500 font-semibold":"cursor-pointer font-semibold"}>Technology</button>
+          <button onClick={()=>setMenu('Startup')} className={menu==='Startup'?"text-green-500 font-semibold":"cursor-pointer font-semibold"}>Startup</button>
+          <button onClick={()=>setMenu('Lifestyle')} className={menu==='Lifestyle'?"text-green-500 font-semibold":"cursor-pointer font-semibold"}>Lifestyle</button>
         </div>
       </div>
 

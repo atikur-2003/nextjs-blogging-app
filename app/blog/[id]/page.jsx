@@ -26,7 +26,6 @@ const BlogDetails = ({ params }) => {
 
   return (
     <div>
-      <Navbar></Navbar>
       <div></div>
       {data ? (
         <>
@@ -53,7 +52,6 @@ const BlogDetails = ({ params }) => {
       ) : (
         <p>No Data Found</p>
       )}
-      <Footer></Footer>
     </div>
   );
 };
