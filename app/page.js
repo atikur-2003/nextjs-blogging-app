@@ -1,12 +1,15 @@
+import Banner from "@/components/Banner";
 import BlogList from "@/components/BlogList";
-import Header from "@/components/Header";
-import Image from "next/image";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
 
 export default function Home() {
   return (
     <>
-    <Header></Header>
+    <Navbar/>
+    <Banner></Banner>
     <BlogList></BlogList>
+    <Footer></Footer>
     </>
   );
 }
