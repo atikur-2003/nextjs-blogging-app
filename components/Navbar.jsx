@@ -3,6 +3,7 @@ import { assets } from "@/Assets/assets";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useSession, signOut } from 'next-auth/react'; 
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -12,10 +13,11 @@ const navLinks = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { data: session, status } = useSession();
 
   // Function to handle logout
   const handleLogout = async () => {
-    await signOut({ callbackUrl: "/" });
+    await signOut({ callbackUrl: '/' }); 
   };
 
   return (
@@ -64,7 +66,7 @@ const Navbar = () => {
 
       {/* Conditional Auth button for desktop */}
       <div className="hidden md:flex">
-        {status === "authenticated" ? (
+        {status === 'authenticated' ? (
           <button
             onClick={handleLogout}
             className="px-4 py-2 border border-green-500 text-green-500 rounded-lg hover:bg-green-500 hover:text-white cursor-pointer transition"
@@ -84,7 +86,7 @@ const Navbar = () => {
       {/* Mobile menu, shown only when `isOpen` is true */}
       <div
         className={`${
-          isOpen ? "block" : "hidden"
+          isOpen ? 'block' : 'hidden'
         } md:hidden w-full absolute top-16 left-0 bg-gray-700 p-4 transition-all duration-300 ease-in-out z-10`}
       >
         <ul className="flex flex-col space-y-4 items-center">
@@ -100,7 +102,7 @@ const Navbar = () => {
             </li>
           ))}
           <li>
-            {status === "authenticated" ? (
+            {status === 'authenticated' ? (
               <button
                 onClick={handleLogout}
                 className="px-4 py-2 border border-green-500 text-green-500 rounded-lg hover:bg-green-500 hover:text-white cursor-pointer transition"
