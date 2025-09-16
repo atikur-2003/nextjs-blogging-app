@@ -8,12 +8,9 @@ const handler = NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
-  callbacks: {
-    async signIn({ user, account, profile }) {
-      // You can save the user to your database here if needed
-      return true; 
-    },
-  },
+
+  secret: process.env.NEXTAUTH_SECRET,
+
   pages: {
     signIn: '/login',
   },
