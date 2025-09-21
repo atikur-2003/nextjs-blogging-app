@@ -26,7 +26,7 @@ const BlogDetails = ({ params }) => {
 
   return (
     <div>
-      <div></div>
+      <div><Navbar></Navbar></div>
       {data ? (
         <>
           <div className="bg-gray-200 text-center py-28">
@@ -52,6 +52,7 @@ const BlogDetails = ({ params }) => {
       ) : (
         <p>No Data Found</p>
       )}
+      <Footer></Footer>
     </div>
   );
 };

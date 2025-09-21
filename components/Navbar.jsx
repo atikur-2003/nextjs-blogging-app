@@ -21,7 +21,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="flex items-center justify-between px-4 lg:px-10 py-3 shadow-lg">
+    <nav className="fixed top-0 left-0 z-10 w-full bg-white flex items-center justify-between px-4 lg:px-10 py-3 shadow-lg">
       {/* Brand/Title on the left */}
       <div>
         <Link href="/">

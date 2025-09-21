@@ -1,7 +1,5 @@
 import { Outfit } from "next/font/google";
 import "./globals.css";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
 
 const outfit = Outfit({
@@ -17,11 +15,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={outfit.className}>
-        <AuthProvider>
-          <Navbar></Navbar>
-          {children}
-          <Footer></Footer>
-        </AuthProvider>
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   );

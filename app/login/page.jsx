@@ -24,7 +24,7 @@ const Login = () => {
         <h2 className="text-2xl font-bold mb-6">Log In</h2>
         <button
           onClick={handleGoogleSignIn}
-          className="flex items-center justify-center w-full px-4 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors duration-300"
+          className="flex items-center justify-center w-full px-4 py-2 text-green-500 border border-green-500 rounded-lg hover:bg-green-600 hover:text-white cursor-pointer transition"
         >
           <img src="https://www.svgrepo.com/show/355037/google.svg" alt="Google logo" className="w-6 h-6 mr-2" />
           Sign in with Google
